@@ -1,0 +1,24 @@
+{
+    "collectionName": "components_media_and_aside_media_and_asides",
+    "info": {
+        "displayName": "media-and-aside",
+        "icon": "layout"
+    },
+    "options": {},
+    "attributes": {
+        "media": {
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ],
+            "type": "media",
+            "multiple": false,
+            "required": true
+        },
+        "text": {
+            "type": "blocks"
+        }
+    }
+}

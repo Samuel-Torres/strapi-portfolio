@@ -1,0 +1,54 @@
+{
+    "kind": "collectionType",
+    "collectionName": "blog_articles",
+    "info": {
+        "singularName": "blog-article",
+        "pluralName": "blog-articles",
+        "displayName": "Blog Article",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "Title": {
+            "type": "string",
+            "required": true
+        },
+        "description": {
+            "type": "string",
+            "required": true
+        },
+        "publishDate": {
+            "type": "date",
+            "required": true
+        },
+        "slug": {
+            "type": "uid",
+            "required": true
+        },
+        "section": {
+            "type": "dynamiczone",
+            "components": [
+                "media-and-aside.media-and-aside",
+                "text.text",
+                "article-hero.article-hero"
+            ]
+        },
+        "previewImage": {
+            "allowedTypes": [
+                "images"
+            ],
+            "type": "media",
+            "multiple": false,
+            "required": true
+        },
+        "categories": {
+            "type": "relation",
+            "relation": "manyToMany",
+            "target": "api::category.category",
+            "mappedBy": "blog_articles"
+        }
+    }
+}
