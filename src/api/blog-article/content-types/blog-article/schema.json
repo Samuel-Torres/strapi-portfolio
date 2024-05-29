@@ -46,8 +46,6 @@
       "type": "dynamiczone",
       "components": [
         "article-hero.article-hero",
-        "media-and-aside.media-and-aside",
-        "media-aside.media-aside",
         "text.text",
         "content-aside.content-aside"
       ],

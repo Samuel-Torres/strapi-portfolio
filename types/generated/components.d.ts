@@ -27,37 +27,6 @@ export interface ContentAsideContentAside extends Schema.Component {
   };
 }
 
-export interface MediaAndAsideMediaAndAside extends Schema.Component {
-  collectionName: 'components_media_and_aside_media_and_asides';
-  info: {
-    displayName: 'media-and-aside';
-    icon: 'layout';
-    description: '';
-  };
-  attributes: {
-    media: Attribute.Media & Attribute.Required;
-    text: Attribute.Blocks & Attribute.Required;
-    isFlipped: Attribute.Boolean &
-      Attribute.Required &
-      Attribute.DefaultTo<false>;
-  };
-}
-
-export interface MediaAsideMediaAside extends Schema.Component {
-  collectionName: 'components_media_aside_media_asides';
-  info: {
-    displayName: 'media-aside';
-    icon: 'layout';
-  };
-  attributes: {
-    isFlipped: Attribute.Boolean &
-      Attribute.Required &
-      Attribute.DefaultTo<false>;
-    text: Attribute.Blocks & Attribute.Required;
-    media: Attribute.Media & Attribute.Required;
-  };
-}
-
 export interface TextText extends Schema.Component {
   collectionName: 'components_text_texts';
   info: {
@@ -74,8 +43,6 @@ declare module '@strapi/types' {
     export interface Components {
       'article-hero.article-hero': ArticleHeroArticleHero;
       'content-aside.content-aside': ContentAsideContentAside;
-      'media-and-aside.media-and-aside': MediaAndAsideMediaAndAside;
-      'media-aside.media-aside': MediaAsideMediaAside;
       'text.text': TextText;
     }
   }

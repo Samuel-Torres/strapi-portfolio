@@ -811,13 +811,7 @@ export interface ApiBlogArticleBlogArticle extends Schema.CollectionType {
       'api::category.category'
     >;
     section: Attribute.DynamicZone<
-      [
-        'article-hero.article-hero',
-        'media-and-aside.media-and-aside',
-        'media-aside.media-aside',
-        'text.text',
-        'content-aside.content-aside'
-      ]
+      ['article-hero.article-hero', 'text.text', 'content-aside.content-aside']
     > &
       Attribute.Required;
     createdAt: Attribute.DateTime;
