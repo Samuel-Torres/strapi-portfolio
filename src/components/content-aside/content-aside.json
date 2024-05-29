@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_content_aside_content_asides",
+  "info": {
+    "displayName": "content-aside",
+    "icon": "layout"
+  },
+  "options": {},
+  "attributes": {
+    "isFlipped": {
+      "type": "boolean"
+    },
+    "text": {
+      "type": "blocks",
+      "required": true
+    },
+    "media": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "orientation": {
+      "type": "enumeration",
+      "enum": [
+        "row",
+        "column"
+      ],
+      "required": true,
+      "default": "row"
+    }
+  }
+}

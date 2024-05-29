@@ -804,19 +804,22 @@ export interface ApiBlogArticleBlogArticle extends Schema.CollectionType {
     description: Attribute.String & Attribute.Required;
     publishDate: Attribute.Date & Attribute.Required;
     slug: Attribute.UID & Attribute.Required;
-    section: Attribute.DynamicZone<
-      [
-        'media-and-aside.media-and-aside',
-        'text.text',
-        'article-hero.article-hero'
-      ]
-    >;
     previewImage: Attribute.Media & Attribute.Required;
     categories: Attribute.Relation<
       'api::blog-article.blog-article',
       'manyToMany',
       'api::category.category'
     >;
+    section: Attribute.DynamicZone<
+      [
+        'article-hero.article-hero',
+        'media-and-aside.media-and-aside',
+        'media-aside.media-aside',
+        'text.text',
+        'content-aside.content-aside'
+      ]
+    > &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

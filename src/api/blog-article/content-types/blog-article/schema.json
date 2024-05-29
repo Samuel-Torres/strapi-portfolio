@@ -28,27 +28,30 @@
       "type": "uid",
       "required": true
     },
-    "section": {
-      "type": "dynamiczone",
-      "components": [
-        "media-and-aside.media-and-aside",
-        "text.text",
-        "article-hero.article-hero"
-      ]
-    },
     "previewImage": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "categories": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::category.category",
       "mappedBy": "blog_articles"
+    },
+    "section": {
+      "type": "dynamiczone",
+      "components": [
+        "article-hero.article-hero",
+        "media-and-aside.media-and-aside",
+        "media-aside.media-aside",
+        "text.text",
+        "content-aside.content-aside"
+      ],
+      "required": true
     }
   }
 }
