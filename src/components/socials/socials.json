@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_socials_socials",
+  "info": {
+    "displayName": "socials",
+    "icon": "manyToMany"
+  },
+  "options": {},
+  "attributes": {
+    "ignore": {
+      "type": "boolean"
+    }
+  }
+}

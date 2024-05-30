@@ -27,6 +27,17 @@ export interface ContentAsideContentAside extends Schema.Component {
   };
 }
 
+export interface SocialsSocials extends Schema.Component {
+  collectionName: 'components_socials_socials';
+  info: {
+    displayName: 'socials';
+    icon: 'manyToMany';
+  };
+  attributes: {
+    ignore: Attribute.Boolean;
+  };
+}
+
 export interface TextText extends Schema.Component {
   collectionName: 'components_text_texts';
   info: {
@@ -43,6 +54,7 @@ declare module '@strapi/types' {
     export interface Components {
       'article-hero.article-hero': ArticleHeroArticleHero;
       'content-aside.content-aside': ContentAsideContentAside;
+      'socials.socials': SocialsSocials;
       'text.text': TextText;
     }
   }
