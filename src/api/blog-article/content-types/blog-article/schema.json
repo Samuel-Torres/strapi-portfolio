@@ -47,9 +47,15 @@
       "components": [
         "article-hero.article-hero",
         "text.text",
-        "content-aside.content-aside"
+        "content-aside.content-aside",
+        "socials.socials"
       ],
       "required": true
+    },
+    "author": {
+      "type": "string",
+      "required": true,
+      "default": "Samuel Torres"
     }
   }
 }

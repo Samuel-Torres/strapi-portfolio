@@ -811,9 +811,17 @@ export interface ApiBlogArticleBlogArticle extends Schema.CollectionType {
       'api::category.category'
     >;
     section: Attribute.DynamicZone<
-      ['article-hero.article-hero', 'text.text', 'content-aside.content-aside']
+      [
+        'article-hero.article-hero',
+        'text.text',
+        'content-aside.content-aside',
+        'socials.socials'
+      ]
     > &
       Attribute.Required;
+    author: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Samuel Torres'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
