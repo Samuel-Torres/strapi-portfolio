@@ -11,6 +11,17 @@ export interface ArticleHeroArticleHero extends Schema.Component {
   };
 }
 
+export interface CodeBlockCodeBlock extends Schema.Component {
+  collectionName: 'components_code_block_code_blocks';
+  info: {
+    displayName: 'code-block';
+    icon: 'layer';
+  };
+  attributes: {
+    code: Attribute.Blocks & Attribute.Required;
+  };
+}
+
 export interface ContentAsideContentAside extends Schema.Component {
   collectionName: 'components_content_aside_content_asides';
   info: {
@@ -53,6 +64,7 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'article-hero.article-hero': ArticleHeroArticleHero;
+      'code-block.code-block': CodeBlockCodeBlock;
       'content-aside.content-aside': ContentAsideContentAside;
       'socials.socials': SocialsSocials;
       'text.text': TextText;

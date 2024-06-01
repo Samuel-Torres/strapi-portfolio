@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_code_block_code_blocks",
+  "info": {
+    "displayName": "code-block",
+    "icon": "layer"
+  },
+  "options": {},
+  "attributes": {
+    "code": {
+      "type": "blocks",
+      "required": true
+    }
+  }
+}
