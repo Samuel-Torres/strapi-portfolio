@@ -38,6 +38,18 @@ export interface ContentAsideContentAside extends Schema.Component {
   };
 }
 
+export interface EmbeddedArticleCardEmbeddedArticleCard
+  extends Schema.Component {
+  collectionName: 'components_embedded_article_card_embedded_article_cards';
+  info: {
+    displayName: 'embeddedArticleCard';
+    icon: 'medium';
+  };
+  attributes: {
+    null: Attribute.String;
+  };
+}
+
 export interface SocialsSocials extends Schema.Component {
   collectionName: 'components_socials_socials';
   info: {
@@ -66,6 +78,7 @@ declare module '@strapi/types' {
       'article-hero.article-hero': ArticleHeroArticleHero;
       'code-block.code-block': CodeBlockCodeBlock;
       'content-aside.content-aside': ContentAsideContentAside;
+      'embedded-article-card.embedded-article-card': EmbeddedArticleCardEmbeddedArticleCard;
       'socials.socials': SocialsSocials;
       'text.text': TextText;
     }
