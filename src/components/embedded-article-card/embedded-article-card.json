@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_embedded_article_card_embedded_article_cards",
+  "info": {
+    "displayName": "embeddedArticleCard",
+    "icon": "medium"
+  },
+  "options": {},
+  "attributes": {
+    "null": {
+      "type": "string"
+    }
+  }
+}
