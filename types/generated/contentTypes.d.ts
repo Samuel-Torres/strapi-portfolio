@@ -817,7 +817,8 @@ export interface ApiBlogArticleBlogArticle extends Schema.CollectionType {
         'content-aside.content-aside',
         'socials.socials',
         'code-block.code-block',
-        'embedded-article-card.embedded-article-card'
+        'embedded-article-card.embedded-article-card',
+        'article-image.article-image'
       ]
     > &
       Attribute.Required;
