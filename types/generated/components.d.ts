@@ -5,9 +5,27 @@ export interface ArticleHeroArticleHero extends Schema.Component {
   info: {
     displayName: 'article-hero';
     icon: 'picture';
+    description: '';
   };
   attributes: {
     imageSource: Attribute.Media & Attribute.Required;
+    linkUrl: Attribute.String;
+    ImageCreatorsName: Attribute.String;
+  };
+}
+
+export interface ArticleImageArticleImage extends Schema.Component {
+  collectionName: 'components_article_image_article_images';
+  info: {
+    displayName: 'articleImage';
+    icon: 'landscape';
+    description: '';
+  };
+  attributes: {
+    imageSource: Attribute.Media & Attribute.Required;
+    ImageCreatorsName: Attribute.String;
+    linkUrl: Attribute.String;
+    alt: Attribute.String;
   };
 }
 
@@ -76,6 +94,7 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'article-hero.article-hero': ArticleHeroArticleHero;
+      'article-image.article-image': ArticleImageArticleImage;
       'code-block.code-block': CodeBlockCodeBlock;
       'content-aside.content-aside': ContentAsideContentAside;
       'embedded-article-card.embedded-article-card': EmbeddedArticleCardEmbeddedArticleCard;
